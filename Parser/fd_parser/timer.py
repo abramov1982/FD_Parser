@@ -1,4 +1,4 @@
-import mongo_connector
+import tickets_to_mongo
 import time
 import yaml
 
@@ -9,7 +9,7 @@ request_period = config['request_period']
 
 
 def timer(seconds):
-    mongo_connector.get_data()
+    tickets_to_mongo.add_db_tickets()
     time.sleep(seconds)
     timer(request_period)
 
