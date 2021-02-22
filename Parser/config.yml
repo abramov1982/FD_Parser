@@ -1,0 +1,18 @@
+fd_api:
+  api_key: "your_api_key"
+  domain: "https://example.com"
+  password: "your_password"
+  pages: 10 # глубина поиска в страницах (30 тикетов на странице)
+
+request_period: 750 #Период запросов к FreshDesk в секундах
+
+bug_types: ['BUG1', 'BUG2', 'BUG3']
+
+mongodb:
+  ip: "mongo_host"
+  port: 27017
+  db_user: "user"
+  db_password: "password"
+  dbname: "your_db"
+
+search_delta: 3 #Дельта поиска тикетов, в месяцах
