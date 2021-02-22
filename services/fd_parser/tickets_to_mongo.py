@@ -29,7 +29,7 @@ db = client[dbname]
 # Получение списка состоящего из номеров тикетов в количестве page_quantity страниц
 def get_tickets_id(page_quantity=1):
     data = []
-    start_date = datetime.now()-relativedelta(months=+delta)
+    start_date = datetime.now() - relativedelta(months=+delta)
     try:
         for page in range(1, page_quantity + 1):
             r = requests.get(f"{domain}{tickets_slug}/view/351659?format=json&page={page}",
@@ -98,3 +98,6 @@ def add_db_tickets():
 
 if __name__ == "__main__":
     add_db_tickets()
+
+# TODO В следующей версии изменить запрос. Сделать через timesheet.
+#  Пример - https://support.hydra-billing.com/helpdesk/time_sheets.json?start_date=2021-02-19&billable=false
